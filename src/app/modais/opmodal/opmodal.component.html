@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="opmodal">
+
+  <h1>{{name}}</h1>
+
+  <ion-item>
+    
+    <ion-label *ngIf="descricao(descr) == true"><p>{{descr}}</p></ion-label>
+    <ion-label *ngIf="descricao(descr) == false"><p>Sem descrição</p></ion-label>
+  </ion-item>
+  
+
+  <ion-label>
+    <ion-button  fill="clear" class="ion-margin-top" color="warning" (click)="duplicar()">Duplicar Tarefa</ion-button>
+  </ion-label>
+
+</ion-content>
